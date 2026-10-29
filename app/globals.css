@@ -1,0 +1,56 @@
+/* ============================================================
+   ARCHIVO: app/globals.css
+   MODULO: Base
+   DESCRIPCION: Estilos globales y configuracion del tema de
+                Tailwind CSS v4. Define la paleta de colores de
+                tematica olivo y tierra para una estética premium.
+   SPRINT: 1
+   RF: RF-009, RF-010
+   ============================================================ */
+
+@import "tailwindcss";
+
+@theme {
+  /* Definir Roboto como fuente predeterminada para font-sans */
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+
+  /* Paleta de colores personalizados inspirados en el olivar */
+  --color-olive-50: #f4f6f0;
+  --color-olive-100: #e6ebda;
+  --color-olive-200: #ced9b7;
+  --color-olive-300: #a9bd88;
+  --color-olive-400: #84a05d;
+  --color-olive-500: #606c38; /* Color insignia: Verde Olivo */
+  --color-olive-600: #4c572c;
+  --color-olive-700: #3a4222;
+  --color-olive-800: #292e18;
+  --color-olive-900: #1b1e10;
+
+  /* Tonos tierra para contraste y profundidad */
+  --color-earth-50: #faf7f2;
+  --color-earth-100: #f0e6d6;
+  --color-earth-500: #bc6c25; /* Terracota */
+  --color-earth-600: #9e551c;
+  --color-earth-900: #2b1d0c;
+
+  /* Color de acento dorado (aceite de oliva) */
+  --color-gold-400: #f4d068;
+  --color-gold-500: #dda15e; /* Oro calido */
+  --color-gold-600: #c98843;
+
+  /* Sombras personalizadas para efecto de profundidad (glassmorphism) */
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Configuracion general para toda la aplicacion */
+body {
+  background-color: var(--color-olive-50);
+  color: var(--color-olive-900);
+}
+
+/* Efectos de fondo y transiciones para dar sensacion de fluidez */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
